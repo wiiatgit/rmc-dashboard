@@ -1,0 +1,35 @@
+$rmc-primary: mat-palette($mat-blue, 600, A100, 900);
+$rmc-accent: mat-palette($mat-pink, 500, 400, 900);
+
+// The warn palette is optional (defaults to red).
+$rmc-warn: mat-palette($mat-red);
+
+$rmc-theme: mat-light-theme(
+    $rmc-primary,
+    $rmc-accent,
+    $rmc-warn
+);
+
+
+.default-theme {
+    mat-sidenav.sidenav-left-navigation {
+        background-color: #2d323e !important;
+
+        mat-expansion-panel.user-info-panel {
+            border-radius: 0;
+
+            .user-info-panel-libelle {
+                color: rgba(mat-contrast($rmc-primary, 500), .6) !important;
+            }
+
+            .mat-expansion-panel-content {
+                background-color: #252a37 !important;
+            }
+        }
+    }
+
+    mat-toolbar.sidenav-left-navigation-toolbar,
+    mat-sidenav .user-infos {
+        background-color: #1e2129 !important;
+    }
+}

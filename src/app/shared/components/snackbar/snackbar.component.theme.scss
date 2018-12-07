@@ -1,0 +1,30 @@
+@import '~@angular/material/theming';
+
+@mixin rmc-snackbar-component-theme($theme) {
+    $accent: map-get($theme, accent);
+    $primary: map-get($theme, primary);
+    $warn: map-get($theme, warn);
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    .mat-snack-bar-container{
+
+        &.snackbar-error{
+            background-color: mat-color($warn);
+            color: #fff;
+
+            .mat-button-wrapper{
+                color: #fff;
+            }
+        }
+
+        &.snackbar-success{
+            background-color: mat-color($primary);
+            color: #fff;
+
+            .mat-button-wrapper{
+                color: #fff;
+            }
+        }
+    }
+}

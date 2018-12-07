@@ -1,0 +1,22 @@
+@import '~@angular/material/theming';
+
+@mixin rmc-top-nav-component-theme($theme) {
+    $accent: map-get($theme, accent);
+    $primary: map-get($theme, primary );
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    .mat-menu-item {
+        &.selected {
+            background-color: mat-color($background, selected-button) !important;
+        }
+    }
+
+    .separator {
+        border-right: 1px solid mat-color($foreground, divider) !important;
+
+        &:last-child {
+            border-right: none !important;
+        }
+    }
+}

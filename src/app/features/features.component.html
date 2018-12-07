@@ -1,0 +1,21 @@
+<mat-sidenav-container
+    fullscreen
+    autosize
+    class="sidenav-container">
+    <mat-sidenav
+        #sidenav class="sidenav-left-navigation"
+        [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+        [mode]="(isHandset$ | async) ? 'over' : 'side'"
+        [opened]="isSidenavOpened$ | async"
+        (closedStart)="sidenavClose()"
+        (openedStart)="sidenavOpen()">
+        <rmc-sidenav></rmc-sidenav>
+    </mat-sidenav>
+
+    <mat-sidenav-content [attr.role]="main">
+        <rmc-top-nav [sidenav]="sidenav"></rmc-top-nav>
+        <router-outlet></router-outlet>
+        <!-- Routed views go here -->
+    </mat-sidenav-content>
+    <rmc-snackbar></rmc-snackbar>
+</mat-sidenav-container>

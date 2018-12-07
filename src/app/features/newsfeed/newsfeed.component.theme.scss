@@ -1,0 +1,24 @@
+@import '~@angular/material/theming';
+
+@mixin rmc-newsfeed-component-theme($theme) {
+    $accent: map-get($theme, accent);
+    $primary: map-get($theme, primary );
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    .newsfeed-header {
+        background-color: mat-color($primary) !important;
+
+        fa-icon.header-background-icon {
+            color: rgba(mat-contrast($primary, 500), .06) !important;
+        }
+
+        h1.header-title {
+            color: mat-contrast($primary, 500);
+        }
+
+        h3.header-description {
+            color: rgba(mat-contrast($primary, 500), .8);
+        }
+    }
+}

@@ -1,0 +1,23 @@
+$rmc-dark-primary: mat-palette($mat-blue-grey);
+$rmc-dark-accent: mat-palette($mat-grey);
+
+// The warn palette is optional (defaults to red).
+$rmc-dark-warn: mat-palette($mat-red);
+
+$rmc-dark-theme: mat-dark-theme(
+    $rmc-dark-primary,
+    $rmc-dark-accent,
+    $rmc-dark-warn
+);
+
+
+.dark-theme {
+    mat-sidenav.sidenav-left-navigation {
+        background-color: #37474F !important;
+    }
+
+    mat-toolbar.sidenav-left-navigation-toolbar,
+    mat-sidenav .user-infos {
+        background-color: #263238 !important;
+    }
+}

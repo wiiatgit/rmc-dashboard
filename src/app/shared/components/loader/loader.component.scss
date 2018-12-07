@@ -1,0 +1,21 @@
+:host {
+
+    #lottie-animation {
+        max-width: 500px;
+        max-height: 250px;
+        margin: 0 auto;
+    }
+
+    .loader-text {
+        text-align: center;
+
+        h3 {
+            font-weight: 700;
+        }
+
+        h5 {
+            font-weight: 500;
+            color: rgba(0, 0, 0, .6);
+        }
+    }
+}

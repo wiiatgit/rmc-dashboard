@@ -1,0 +1,52 @@
+<mat-toolbar fxLayout="row" fxLayoutAlign="center center" class="sidenav-left-navigation-toolbar">
+  <span class="logo">
+    <img src="/assets/comptalia/img/logo-login.svg" alt="Logo">
+  </span>
+</mat-toolbar>
+<div *ngIf="(currentUser$ | async) as currentUser" class="user-infos" fxLayout="row" fxLayoutAlign="start center">
+  <div class="user-avatar">
+      <img [src]="currentUser.profilePicture" alt="avatar">
+  </div>
+  <div class="user-name" fxFlex>
+      {{ currentUser.firstName }} {{ currentUser.lastName }}
+  </div>
+  <div class="user-btn" *ngIf="currentUser.promotions">
+    <button mat-icon-button (click)="toggleUserInfoPanel()">
+      <fa-icon [icon]="['fas', isUserInfoPanelOpened ? 'minus-square' : 'plus-square']"></fa-icon>
+    </button>
+  </div>
+</div>
+<div *ngIf="(currentUser$ | async) as currentUser">
+  <mat-expansion-panel class="user-info-panel" #userInfoPanel>
+    <div *ngFor="let promo of currentUser.promotions">
+      {{ promo.titreParcours }} : <span class="user-info-panel-libelle"> Promo - {{ promo.libelle }}</span>
+    </div>
+  </mat-expansion-panel>
+</div>
+
+<mat-nav-list>
+  <div>
+    <h3 matSubheader>application</h3>
+    <a mat-list-item
+      href="#"
+      routerLinkActive="active"
+      [routerLink]="['newsfeed']"
+      fxLayout="row">
+        <fa-icon [icon]="['far', 'newspaper']"></fa-icon>
+        <span>{{ 'SIDENAV.NEWSFEED' | translate }}</span>
+        <span fxFlex="100"></span>
+        <mat-chip-list>
+            <mat-chip color="accent" selected>3</mat-chip>
+        </mat-chip-list>
+    </a>
+    <a mat-list-item
+      href="#"
+      routerLinkActive="active"
+      [routerLink]="['library']"
+      fxLayout="row">
+        <fa-icon [icon]="['fas', 'list-alt']"></fa-icon>
+        <span>{{ 'SIDENAV.LIBRARY' | translate }}</span>
+        <span fxFlex="100"></span>
+    </a>
+  </div>
+</mat-nav-list>

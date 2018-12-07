@@ -1,0 +1,71 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="container" fxLayout="row" fxLayoutAlign="center center">
+    <div
+      class="wrapper z-depth-5 hoverable"
+      fxFlexAlign="auto"
+      fxFlex.gt-xs="50"
+      fxFlex.xs="90"
+      fxLayout="column"
+      fxLayoutAlign="center stretch">
+      <div class="logo">
+        <img src="/assets/comptalia/img/logo-login.svg" alt="Logo">
+      </div>
+      <mat-divider></mat-divider>
+      <!-- End logo -->
+      <div class="title">
+        <h3>{{ 'LOGIN.TITLE' | translate }}</h3>
+      </div>
+      <!-- End Title -->
+      <div class="content" fxLayout="column" fxLayoutAlign="space-around stretch" fxLayoutGap="20px">
+        <mat-form-field appearance="outline">
+          <mat-label>{{ 'LOGIN.EMAIL_INPUT_LABEL' | translate }}</mat-label>
+          <input
+            matInput
+            required
+            type="text"
+            formControlName="email">
+          <fa-icon matSuffix [icon]="['fas', 'user']"></fa-icon>
+          <mat-error *ngIf="emailCtrl.hasError('required')">
+            {{ 'LOGIN.EMAIL_INPUT_ERROR_REQUIRED' | translate }}
+          </mat-error>
+          <mat-error *ngIf="emailCtrl.hasError('email')">
+            {{ 'LOGIN.EMAIL_INPUT_ERROR_VALID' | translate }}
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline">
+          <mat-label>{{ 'LOGIN.PASSWORD_INPUT_LABEL' | translate }}</mat-label>
+          <input
+            matInput
+            required
+            type="password"
+            minlength="4"
+            formControlName="password">
+          <fa-icon matSuffix [icon]="['fas', 'key']"></fa-icon>
+          <mat-error *ngIf="passwordCtrl.hasError('required')">
+            {{ 'LOGIN.PASSWORD_INPUT_ERROR_REQUIRED' | translate }}
+          </mat-error>
+          <mat-error *ngIf="passwordCtrl.hasError('minlength')">
+            {{ 'LOGIN.PASSWORD_INPUT_ERROR_MINLENGTH' | translate:passwordMinLength }}
+          </mat-error>
+        </mat-form-field>
+        <div class="errors">
+          <mat-error *ngIf="error">
+            {{ error }}
+          </mat-error>
+        </div>
+      </div>
+      <!-- End content -->
+      <div fxLayout="row" fxLayoutGap="10px" fxLayoutAlign="center start" class="actions">
+        <button mat-raised-button [disabled]="loading" color="primary" type="submit">
+          <fa-icon [icon]="['fas', 'unlock-alt']"></fa-icon>
+          {{ 'LOGIN.BTN_CONNECTION_LABEL' | translate }}
+          <fa-icon *ngIf="loading" [icon]="['fas', 'spinner']" [spin]="true"></fa-icon>
+        </button>
+        <button mat-button class="btn-forgot-password" type="button">
+          {{ 'LOGIN.BTN_FORGOT_PASSWORD_LABEL' | translate }}
+        </button>
+      </div>
+      <!-- End action -->
+    </div>
+  </div>
+</form>

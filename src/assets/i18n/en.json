@@ -1,0 +1,27 @@
+{
+    "NEWSFEED": {
+      "TITLE": "Newsfeed",
+      "DESCRIPTION": "This is the description of the Home page in English to illustrate the translation, of course this text will be changed"
+    },
+    "SIDENAV": {
+        "NEWSFEED": "Newsfeed",
+        "LIBRARY": "Library"
+    },
+    "TOPNAV": {
+      "LANGUAGE_SELECT_OPTION": {
+        "FR": "Français",
+        "EN": "Anglais"
+      }
+    },
+    "LOGIN": {
+      "TITLE": "Member access",
+      "EMAIL_INPUT_LABEL": "E-mail address",
+      "EMAIL_INPUT_ERROR_REQUIRED": "E-mail address is required",
+      "EMAIL_INPUT_ERROR_VALID": "Please enter a valid e-mail address",
+      "PASSWORD_INPUT_LABEL": "Password",
+      "PASSWORD_INPUT_ERROR_REQUIRED": "Password is required",
+      "PASSWORD_INPUT_ERROR_MINLENGTH": "Password must contain {{value}} characters",
+      "BTN_CONNECTION_LABEL": "Connection",
+      "BTN_FORGOT_PASSWORD_LABEL": "Forgot password?"
+    }
+  }

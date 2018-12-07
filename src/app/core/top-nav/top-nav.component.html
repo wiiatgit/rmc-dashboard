@@ -1,0 +1,56 @@
+<mat-toolbar class="z-depth-1">
+  <span>
+    <button type="button" aria-label="Toggle sidenav" mat-button (click)="toggleSidenav()">
+      <fa-icon [icon]="['fas', 'bars']" size="lg"></fa-icon>
+    </button>
+  </span>
+  <span fxFlex></span>
+  <span class="separator">
+
+  </span>
+  <span class="separator">
+    <button mat-icon-button [matMenuTriggerFor]="userMenu">
+      <fa-icon [icon]="['fas', 'user-cog']"></fa-icon>
+    </button>
+    <mat-menu #userMenu="matMenu">
+      <button mat-menu-item [routerLink]="[ '/features/user/profile' ]">
+        <fa-icon [icon]="['fas', 'user-circle']"></fa-icon>
+        My profile
+      </button>
+      <button mat-menu-item (click)="logout()">
+        <fa-icon [icon]="['fas', 'sign-out-alt']"></fa-icon>
+        Logout
+      </button>
+    </mat-menu>
+  </span>
+  <span class="separator">
+    <button mat-button [matMenuTriggerFor]="langageMenu">
+        <img class="language-flag-btn" [src]="'assets/img/flags/' + translate.currentLang + '.svg'" alt="English"> {{ translate.currentLang | uppercase }}
+    </button>
+    <mat-menu #langageMenu="matMenu">
+      <button mat-menu-item [ngClass]="{'selected': translate.currentLang === 'fr'}" (click)="ChangeLanguage('fr')">
+        <img class="language-flag" src="assets/img/flags/fr.svg" alt="French"> {{ 'TOPNAV.LANGUAGE_SELECT_OPTION.FR' | translate }}
+      </button>
+      <button mat-menu-item [ngClass]="{'selected': translate.currentLang === 'en'}" (click)="ChangeLanguage('en')">
+          <img class="language-flag" src="assets/img/flags/en.svg" alt="English"> {{ 'TOPNAV.LANGUAGE_SELECT_OPTION.EN' | translate }}
+        </button>
+    </mat-menu>
+  </span>
+  <span class="separator">
+    <button
+      mat-icon-button
+      matTooltip="Change theme"
+      matTooltipPosition="below"
+      [matMenuTriggerFor]="themeMenu">
+      <fa-icon [icon]="['fas', 'adjust']"></fa-icon>
+    </button>
+    <mat-menu #themeMenu="matMenu">
+      <button
+        mat-menu-item
+        *ngFor="let theme of themeList"
+        (click)="changeTheme(theme)"
+        [ngClass]="{selected: (currentTheme$ | async) === theme }">
+         {{ theme }} </button>
+    </mat-menu>
+  </span>
+</mat-toolbar>

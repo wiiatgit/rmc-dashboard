@@ -1,0 +1,77 @@
+:host {
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url('/assets/img/dark-material-bg.jpg') no-repeat center center;
+        background-size: cover;
+
+
+        .wrapper {
+            text-align: center;
+            color: whitesmoke;
+            padding: 30px;
+            background-color: rgba(whitesmoke, .01);
+
+            .logo {
+                img {
+                    width: 100%;
+                    max-height: 60px;
+                }
+            }
+
+            mat-divider {
+                border-top-color: rgba(255,255, 255, 0.25) !important;
+                margin: 30px;
+            }
+
+            .title {
+
+                h3 {
+                   font-weight: 500;
+                }
+            }
+
+            .content {
+                margin: 30px;
+
+                mat-form-field {
+                    font-size: 18px;
+                }
+
+                .mat-form-field-appearance-outline .mat-form-field-suffix {
+                    top: -0.25em;
+                    margin-right: 15px;
+                }
+
+                .mat-form-field-placeholder {
+                    color: white;
+                }
+
+                .mat-form-field-appearance-outline .mat-form-field-outline {
+                    color: rgba(255,255, 255, 0.12) !important;
+                }
+
+                .mat-form-field-appearance-outline::focused .mat-form-field-outline {
+                    color: rgba(255,255, 255, 0.12) !important;
+                }
+
+                .mat-form-field-label{
+                    color: whitesmoke;
+                }
+            }
+
+            .actions {
+                fa-icon {
+                    margin: .75rem;
+                }
+
+                .mat-raised-button.mat-primary[disabled] {
+                    color: rgba(255,255, 255, 0.25)
+                }
+            }
+        }
+    }
+}

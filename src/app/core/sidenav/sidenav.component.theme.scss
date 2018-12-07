@@ -1,0 +1,79 @@
+@import '~@angular/material/theming';
+
+@mixin rmc-sidenav-component-theme($theme) {
+    $accent: map-get($theme, accent);
+    $primary: map-get($theme, primary );
+    $background: map-get($theme, background);
+    $foreground: map-get($theme, foreground);
+
+    rmc-sidenav {
+        mat-nav-list {
+
+            .mat-subheader {
+                color: rgba(mat-contrast($primary, 500), .4) !important;
+            }
+
+            .mat-list-item {
+                color: rgba(mat-contrast($primary, 500), .6) !important;
+
+                &:hover:not(.active) {
+                    background-color: rgba(white, .05) !important;
+                    color: rgba(mat-contrast($primary, 500), 1) !important;
+                    -webkit-transition: color .3s ease-out;
+                    -moz-transition: color .3s ease-out;
+                    -o-transition: color .3s ease-out;
+                    transition: color .3s ease-out;
+                }
+
+                &.active {
+                    background-color: mat-color($primary) !important;
+                    color: rgba(mat-contrast($primary, 500), 1) !important;
+                }
+            }
+        }
+
+        .user-infos {
+            color: mat-contrast($primary, 500);
+
+            .user-name {
+                color: mat-contrast($primary, 500);
+            }
+
+            .user-avatar {
+
+                img {
+                    border: 7px solid mat-color($primary) !important;
+                }
+            }
+        }
+
+        mat-toolbar.sidenav-left-navigation-toolbar {
+            color: mat-contrast($primary, 500);
+        }
+
+        .mat-expansion-panel {
+            background: none;
+            color: mat-contrast($primary, 500);
+
+            &:not([class*='mat-elevation-z']) {
+                box-shadow: none;
+            }
+
+            .mat-expansion-panel-header-title {
+                color: rgba(mat-contrast($primary, 500), .6) !important;
+            }
+
+            .mat-expansion-indicator::after {
+                color: rgba(mat-contrast($primary, 500), 0.54) !important;
+            }
+
+            .mat-expansion-panel-content {
+                background-color: #1e2129 !important;
+
+                .mat-expansion-panel-body {
+                    padding: 10px 0 !important;
+                }
+            }
+        }
+    }
+}

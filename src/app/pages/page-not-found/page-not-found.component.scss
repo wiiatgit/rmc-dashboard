@@ -1,0 +1,40 @@
+:host {
+
+    .container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: url('/assets/img/dark-material-bg.jpg') no-repeat center center;
+        background-size: cover;
+
+
+        .wrapper {
+            text-align: center;
+            color: whitesmoke;
+            padding: 30px;
+
+            .title {
+                font-size: 64px;
+                margin-bottom: 20px;
+
+                fa-icon {
+                    margin: 0 20px;
+                }
+            }
+
+            .mat-divider {
+                border-top-color: rgba(255, 255, 255, .3);
+            }
+
+            .content {
+                margin: 20px 0;
+
+                p {
+                    color: rgba(255, 255, 255, .6);
+                }
+            }
+        }
+    }
+}

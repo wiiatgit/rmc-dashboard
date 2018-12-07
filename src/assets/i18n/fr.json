@@ -1,0 +1,27 @@
+{
+    "NEWSFEED": {
+      "TITLE": "Actualité",
+      "DESCRIPTION": "Ceci est la description de la page Accueil en français pour illustrer la traduction, bien sur ce texte va être changé"
+    },
+    "SIDENAV": {
+        "NEWSFEED": "Fil d'actualité",
+        "LIBRARY": "Médiathèque"
+    },
+    "TOPNAV": {
+      "LANGUAGE_SELECT_OPTION": {
+        "FR": "French",
+        "EN": "English"
+      }
+    },
+    "LOGIN": {
+      "TITLE": "Accès membre",
+      "EMAIL_INPUT_LABEL": "Adresse email",
+      "EMAIL_INPUT_ERROR_REQUIRED": "L'adresse email est obligatoire",
+      "EMAIL_INPUT_ERROR_VALID": "Merci de saisir une adresse email valide",
+      "PASSWORD_INPUT_LABEL": "Mot de passe",
+      "PASSWORD_INPUT_ERROR_REQUIRED": "Le mot de passe est obligatoire",
+      "PASSWORD_INPUT_ERROR_MINLENGTH": "Le mot de passe doit contenir {{value}} caractères",
+      "BTN_CONNECTION_LABEL": "Connexion",
+      "BTN_FORGOT_PASSWORD_LABEL": "Mot de passe oublié"
+    }
+  }

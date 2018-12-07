@@ -1,0 +1,90 @@
+:host {
+
+    .logo {
+        img {
+            max-width: 150px;
+        }
+    }
+
+    .user-infos {
+        padding: 15px;
+
+        .user-avatar {
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+            }
+        }
+
+        .user-name {
+            margin-left: 15px;
+            max-width: 200px;
+        }
+
+        .user-btn {
+
+        }
+    }
+
+    mat-expansion-panel.user-info-panel {
+
+        .mat-expansion-panel-content .mat-expansion-panel-body {
+            font-size: .75rem;
+
+            &>div {
+                padding: 0 1rem !important;
+            }
+        }
+    }
+
+    mat-nav-list {
+        padding-right: 15px;
+
+        .mat-subheader {
+            font-size: 0.625rem !important;
+            font-weight: 600;
+            text-transform: uppercase;
+            white-space: nowrap;
+            margin-bottom: 8px !important;
+            border-bottom: 1px solid;
+            letter-spacing: 1px;
+        }
+
+        .mat-list-item {
+            border-radius: 0 25px 25px 0;
+
+            .mat-list-item-ripple {
+                border-radius: 0 25px 25px 0;
+            }
+
+            .mat-list-item-content {
+                width: 100%;
+                font-size: 0.875rem !important;
+                letter-spacing: 1px;
+
+                fa-icon {
+                    margin-right: 1rem;
+                }
+
+                .mat-standard-chip {
+                    min-height: 28px !important;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    }
+
+    .mat-expansion-panel {
+
+        mat-expansion-panel-header {
+            padding: 0 40px 0 15px;
+
+
+            fa-icon {
+                margin-right: 1rem;
+            }
+        }
+    }
+}
