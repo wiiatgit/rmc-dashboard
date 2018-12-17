@@ -27,7 +27,8 @@ import { UserEffects } from './features/user/state/user.effects';
 import { FeaturesModule } from './features/features.module';
 import { PagesModule } from './pages/pages.module';
 import { StoreRouterConnectingModule, RouterStateSerializer } from '@ngrx/router-store';
-import { CustomSerializer } from './shared/helpers/utils';
+import { CustomSerializer } from './shared/utils/custom-serializer';
+import { fakeBackendProvider } from './shared/utils/fake-backend-provider';
 
 // AoT requires an exported function for factories
 export function HttpLoaderFactory(http: HttpClient) {
@@ -71,7 +72,8 @@ export function initializeApp(appConfig: AppConfig) {
   providers: [
     AppConfig,
     { provide: APP_INITIALIZER, useFactory: initializeApp, deps: [AppConfig], multi: true },
-    { provide: RouterStateSerializer, useClass: CustomSerializer}
+    { provide: RouterStateSerializer, useClass: CustomSerializer},
+    fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })

@@ -4,9 +4,9 @@ import { FeaturesComponent } from './features.component';
 import { AuthGuard } from '../core/auth/auth.guard';
 
 const routes: Routes = [
-  { path: 'features', component: FeaturesComponent, canActivate: [AuthGuard],
+  { path: 'features', component: FeaturesComponent,
     children: [
-      { path: '', redirectTo: 'library', pathMatch: 'full' },
+      { path: '', redirectTo: 'library', pathMatch: 'full', canActivate: [AuthGuard] },
       { path: 'newsfeed', loadChildren: './newsfeed/newsfeed.module#NewsfeedModule' },
       { path: 'user', loadChildren: './user/user.module#UserModule' }
     ]

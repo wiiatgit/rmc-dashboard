@@ -1,8 +1,8 @@
-:host {
+:host/deep/ {
 
     .logo {
-        img {
-            max-width: 150px;
+        svg {
+            max-height: 25px;
         }
     }
 
