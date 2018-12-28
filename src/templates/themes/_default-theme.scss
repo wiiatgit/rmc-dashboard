@@ -1,13 +1,13 @@
-$rmc-primary: mat-palette($mat-blue, 600, A100, 900);
-$rmc-accent: mat-palette($mat-pink, 500, 400, 900);
+$fgl-primary: mat-palette($mat-blue, 600, A100, 900);
+$fgl-accent: mat-palette($mat-pink, 500, 400, 900);
 
 // The warn palette is optional (defaults to red).
-$rmc-warn: mat-palette($mat-red);
+$fgl-warn: mat-palette($mat-red);
 
-$rmc-theme: mat-light-theme(
-    $rmc-primary,
-    $rmc-accent,
-    $rmc-warn
+$fgl-theme: mat-light-theme(
+    $fgl-primary,
+    $fgl-accent,
+    $fgl-warn
 );
 
 
@@ -19,7 +19,7 @@ $rmc-theme: mat-light-theme(
             border-radius: 0;
 
             .user-info-panel-libelle {
-                color: rgba(mat-contrast($rmc-primary, 500), .6) !important;
+                color: rgba(mat-contrast($fgl-primary, 500), .6) !important;
             }
 
             .mat-expansion-panel-content {

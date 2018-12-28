@@ -10,9 +10,9 @@
 // Import custom components theme
 @import '../app/core/sidenav/sidenav.component.theme.scss';
 @import '../app/core/top-nav/top-nav.component.theme.scss';
+@import '../app/features/dashboard/analytics/analytics.component.theme.scss';
 @import '../app/shared/components/snackbar/snackbar.component.theme.scss';
 @import '../app/pages/page-not-found/page-not-found.component.theme.scss';
-@import '../app/features/newsfeed/newsfeed.component.theme.scss';
 
 // Import core scss
 @import 'helpers';
@@ -24,19 +24,19 @@
 @include mat-core();
 
 @mixin custom-components-theme($theme) {
-    @include rmc-sidenav-component-theme($theme);
-    @include rmc-top-nav-component-theme($theme);
-    @include rmc-snackbar-component-theme($theme);
-    @include rmc-page-not-found-component-theme($theme);
-    @include rmc-newsfeed-component-theme($theme);
+    @include fgl-sidenav-component-theme($theme);
+    @include fgl-top-nav-component-theme($theme);
+    @include fgl-analytics-component-theme($theme);
+    @include fgl-snackbar-component-theme($theme);
+    @include fgl-page-not-found-component-theme($theme);
 }
 
 .default-theme {
-    @include angular-material-theme($rmc-theme);
-    @include custom-components-theme($rmc-theme);
+    @include angular-material-theme($fgl-theme);
+    @include custom-components-theme($fgl-theme);
 }
 
 .dark-theme {
-    @include angular-material-theme($rmc-dark-theme);
-    @include custom-components-theme($rmc-dark-theme);
+    @include angular-material-theme($fgl-dark-theme);
+    @include custom-components-theme($fgl-dark-theme);
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -9,13 +9,14 @@ import * as fromUserActions from './user/state/user.actions';
 import * as fromUiActions from '../state/ui/ui.actions';
 
 @Component({
-  selector: 'rmc-features',
+  selector: 'fgl-features',
   templateUrl: './features.component.html',
-  styleUrls: ['./features.component.scss']
+  styleUrls: ['./features.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FeaturesComponent implements OnInit {
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset).pipe(map(result => result.matches));
-  isSidenavOpened$: Observable<boolean> = this.store.pipe(select(fromUiSelectors.getSidenavState));
+  // isSidenavOpened$: Observable<boolean> = this.store.pipe(select(fromUiSelectors.getSidenavState));
 
   constructor(
     private breakpointObserver: BreakpointObserver,
@@ -26,12 +27,15 @@ export class FeaturesComponent implements OnInit {
     this.store.dispatch(new fromUserActions.LoadUserProfilAction);
   }
 
-  sidenavClose(): void {
-    this.store.dispatch(new fromUiActions.ToggleSidenavAction(false));
+  sidenavChange(isOpen: boolean) {
+    this.store.dispatch(new fromUiActions.ToggleSidenavAction(isOpen));
+  }
 
+  sidenavClose(): void {
+    // this.store.dispatch(new fromUiActions.ToggleSidenavAction(false));
   }
 
   sidenavOpen(): void {
-    this.store.dispatch(new fromUiActions.ToggleSidenavAction(true));
+    // this.store.dispatch(new fromUiActions.ToggleSidenavAction(true));
   }
 }

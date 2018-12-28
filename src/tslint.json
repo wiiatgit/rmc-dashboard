@@ -4,13 +4,13 @@
         "directive-selector": [
             true,
             "attribute",
-            "rmc",
+            "fgl",
             "camelCase"
         ],
         "component-selector": [
             true,
             "element",
-            "rmc",
+            "fgl",
             "kebab-case"
         ]
     }

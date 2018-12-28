@@ -1,13 +1,13 @@
-$rmc-dark-primary: mat-palette($mat-blue-grey);
-$rmc-dark-accent: mat-palette($mat-grey);
+$fgl-dark-primary: mat-palette($mat-blue-grey);
+$fgl-dark-accent: mat-palette($mat-grey);
 
 // The warn palette is optional (defaults to red).
-$rmc-dark-warn: mat-palette($mat-red);
+$fgl-dark-warn: mat-palette($mat-red);
 
-$rmc-dark-theme: mat-dark-theme(
-    $rmc-dark-primary,
-    $rmc-dark-accent,
-    $rmc-dark-warn
+$fgl-dark-theme: mat-dark-theme(
+    $fgl-dark-primary,
+    $fgl-dark-accent,
+    $fgl-dark-warn
 );
 
 

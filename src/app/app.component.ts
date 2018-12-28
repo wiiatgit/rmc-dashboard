@@ -7,7 +7,7 @@ import * as fromUiActions from './state/ui/ui.actions';
 import { Observable } from 'rxjs';
 
 @Component({
-  selector: 'rmc-root',
+  selector: 'fgl-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

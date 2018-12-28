@@ -1,12 +1,12 @@
 @import '~@angular/material/theming';
 
-@mixin rmc-sidenav-component-theme($theme) {
+@mixin fgl-sidenav-component-theme($theme) {
     $accent: map-get($theme, accent);
     $primary: map-get($theme, primary );
     $background: map-get($theme, background);
     $foreground: map-get($theme, foreground);
 
-    rmc-sidenav {
+    fgl-sidenav {
         mat-nav-list {
 
             .mat-subheader {

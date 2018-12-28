@@ -6,16 +6,17 @@
         #sidenav class="sidenav-left-navigation"
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="(isHandset$ | async) ? 'over' : 'side'"
-        [opened]="isSidenavOpened$ | async"
+        [opened]="!(isHandset$ | async)"
+        (openedChange) = "sidenavChange($event)"
         (closedStart)="sidenavClose()"
         (openedStart)="sidenavOpen()">
-        <rmc-sidenav></rmc-sidenav>
+        <fgl-sidenav></fgl-sidenav>
     </mat-sidenav>
 
     <mat-sidenav-content [attr.role]="main">
-        <rmc-top-nav [sidenav]="sidenav"></rmc-top-nav>
+        <fgl-top-nav [sidenav]="sidenav"></fgl-top-nav>
         <router-outlet></router-outlet>
         <!-- Routed views go here -->
     </mat-sidenav-content>
-    <rmc-snackbar></rmc-snackbar>
+    <fgl-snackbar></fgl-snackbar>
 </mat-sidenav-container>

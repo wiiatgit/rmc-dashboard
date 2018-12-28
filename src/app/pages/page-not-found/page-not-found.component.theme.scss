@@ -1,10 +1,10 @@
 @import '~@angular/material/theming';
 
-@mixin rmc-page-not-found-component-theme($theme) {
+@mixin fgl-page-not-found-component-theme($theme) {
     $accent: map-get($theme, accent);
     $primary: map-get($theme, primary );
 
-    rmc-page-not-found {
+    fgl-page-not-found {
         .title {
             fa-icon {
                 color: mat-color($accent);

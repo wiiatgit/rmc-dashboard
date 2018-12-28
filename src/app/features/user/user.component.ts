@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'rmc-user',
+  selector: 'fgl-user',
   template: '<router-outlet></router-outlet>',
 })
 export class UserComponent implements OnInit {

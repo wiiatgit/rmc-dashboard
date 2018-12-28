@@ -8,7 +8,7 @@ import * as fromUiSelectors from '../../state/ui/ui.selectors';
 import { LoginService } from 'src/app/pages/login/login.service';
 
 @Component({
-  selector: 'rmc-top-nav',
+  selector: 'fgl-top-nav',
   templateUrl: './top-nav.component.html',
   styleUrls: ['./top-nav.component.scss']
 })

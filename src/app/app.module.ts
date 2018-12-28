@@ -54,7 +54,7 @@ export function initializeApp(appConfig: AppConfig) {
     EffectsModule.forRoot([UserEffects]),
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument({
-      name: 'Rmc Dashboard',
+      name: 'Frogular Dashboard',
       maxAge: 25,
       logOnly: environment.production
     }),

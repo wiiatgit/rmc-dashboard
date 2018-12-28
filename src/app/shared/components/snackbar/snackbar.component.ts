@@ -11,7 +11,7 @@ import {
 } from '@angular/material';
 
 @Component({
-  selector: 'rmc-snackbar',
+  selector: 'fgl-snackbar',
   template: '',
   styleUrls: ['./snackbar.component.scss']
 })

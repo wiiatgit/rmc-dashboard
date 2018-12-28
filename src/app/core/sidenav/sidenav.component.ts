@@ -7,7 +7,7 @@ import { Store, select } from '@ngrx/store';
 import { IAppState } from 'src/app/state/app.state';
 
 @Component({
-  selector: 'rmc-sidenav',
+  selector: 'fgl-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss']
 })

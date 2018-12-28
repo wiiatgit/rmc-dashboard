@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
 
-@mixin rmc-snackbar-component-theme($theme) {
+@mixin fgl-snackbar-component-theme($theme) {
     $accent: map-get($theme, accent);
     $primary: map-get($theme, primary);
     $warn: map-get($theme, warn);

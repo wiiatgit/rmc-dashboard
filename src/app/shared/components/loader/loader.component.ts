@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import * as bodymovin from 'lottie-web';
 
 @Component({
-  selector: 'rmc-loader',
+  selector: 'fgl-loader',
   templateUrl: './loader.component.html',
   styleUrls: ['./loader.component.scss']
 })

@@ -7,7 +7,7 @@ import { Store } from '@ngrx/store';
 import { IAppState } from 'src/app/state/app.state';
 
 @Component({
-  selector: 'rmc-login',
+  selector: 'fgl-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush

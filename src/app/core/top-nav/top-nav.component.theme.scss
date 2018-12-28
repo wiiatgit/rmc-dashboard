@@ -1,6 +1,6 @@
 @import '~@angular/material/theming';
 
-@mixin rmc-top-nav-component-theme($theme) {
+@mixin fgl-top-nav-component-theme($theme) {
     $accent: map-get($theme, accent);
     $primary: map-get($theme, primary );
     $background: map-get($theme, background);
