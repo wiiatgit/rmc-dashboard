@@ -51,6 +51,11 @@
             color: mat-contrast($primary, 500);
         }
 
+
+        .mat-expansion-panel:not(.mat-expanded) .mat-expansion-panel-header:not([aria-disabled="true"]):hover {
+            background-color: rgba(white, .05) !important;
+        }
+
         .mat-expansion-panel {
             background: none;
             color: mat-contrast($primary, 500);
@@ -69,10 +74,6 @@
 
             .mat-expansion-panel-content {
                 background-color: #1e2129 !important;
-
-                .mat-expansion-panel-body {
-                    padding: 10px 0 !important;
-                }
             }
         }
     }

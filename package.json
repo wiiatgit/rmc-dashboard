@@ -7,8 +7,11 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "electron": "electron .",
+    "start-electron": "npm run electron | npm run start"
   },
+  "main": "main.js",
   "private": true,
   "dependencies": {
     "@angular/animations": "^7.1.0",

@@ -22,25 +22,21 @@
             margin-left: 15px;
             max-width: 200px;
         }
-
-        .user-btn {
-
-        }
     }
 
-    mat-expansion-panel.user-info-panel {
+    // mat-expansion-panel.user-info-panel {
 
-        .mat-expansion-panel-content .mat-expansion-panel-body {
-            font-size: .75rem;
+    //     .mat-expansion-panel-content .mat-expansion-panel-body {
+    //         font-size: .75rem;
 
-            &>div {
-                padding: 0 1rem !important;
-            }
-        }
-    }
+    //         &>div {
+    //             padding: 0 1rem !important;
+    //         }
+    //     }
+    // }
 
     mat-nav-list {
-        padding-right: 15px;
+        // padding-right: 15px;
 
         .mat-subheader {
             font-size: 0.625rem !important;
@@ -54,6 +50,7 @@
 
         .mat-list-item {
             border-radius: 0 25px 25px 0;
+            height: 36px;
 
             .mat-list-item-ripple {
                 border-radius: 0 25px 25px 0;
@@ -61,29 +58,58 @@
 
             .mat-list-item-content {
                 width: 100%;
-                font-size: 0.875rem !important;
+                font-size: .725rem !important;
                 letter-spacing: 1px;
+                white-space: nowrap;
 
                 fa-icon {
                     margin-right: 1rem;
+                    font-size: 1rem;
                 }
 
                 .mat-standard-chip {
-                    min-height: 28px !important;
-                    font-size: 0.875rem;
+                    min-height: 22px !important;
+                    font-size: 0.725rem;
                 }
             }
         }
     }
 
+    .mat-list-item-link,
+    mat-expansion-panel-header {
+        margin-right: 15px;
+    }
+
     .mat-expansion-panel {
 
-        mat-expansion-panel-header {
-            padding: 0 40px 0 15px;
+        .mat-expansion-indicator::after {
+            margin-top: -3px;
+        }
 
+        mat-expansion-panel-header {
+            padding: 0 15px;
+
+            mat-panel-title {
+                line-height: 22px;
+                font-size: .725rem;
+                letter-spacing: 1px;
+            }
+
+            &:hover {
+                border-radius: 0 25px 25px 0 !important;
+            }
 
             fa-icon {
                 margin-right: 1rem;
+                font-size: 1rem;
+            }
+        }
+
+        .mat-expansion-panel-body {
+            padding: 10px 15px 10px 0 !important;
+
+            .mat-list-item-content {
+                padding-left: 25px;
             }
         }
     }
