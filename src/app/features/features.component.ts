@@ -27,7 +27,7 @@ export class FeaturesComponent implements OnInit {
     this.store.dispatch(new fromUserActions.LoadUserProfilAction);
   }
 
-  sidenavChange(isOpen: boolean) {
+  sidenavToggle(isOpen: boolean) {
     this.store.dispatch(new fromUiActions.ToggleSidenavAction(isOpen));
   }
 

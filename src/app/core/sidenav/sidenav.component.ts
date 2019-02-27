@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, ChangeDetectionStrategy } from '@angular/core';
 import { Observable } from 'rxjs';
 import { TranslateService } from '@ngx-translate/core';
 import * as fromUserSelectors from '../../features/user/state/user.selectors';
@@ -9,7 +9,8 @@ import { IAppState } from 'src/app/state/app.state';
 @Component({
   selector: 'fgl-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss']
+  styleUrls: ['./sidenav.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidenavComponent implements OnInit {
   @ViewChild('userInfoPanel') userInfoPanel;
